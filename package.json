@@ -1,10 +1,17 @@
 {
-  "name": "group-todo-backend",
+  "name": "sample-todo-backend",
   "version": "1.0.0",
-  "description": "Backend for Todo using Express js and MongoDB",
-  "main": "index.js",
+  "description": "Backend for a sample to-do application using ExpressJs and MongoDb",
+  "main": "./src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "security-tests": "npm run security:outdated && npm run security:audit",
+    "security:audit": "npm audit || true",
+    "security:outdated": "npm outdated || true",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "pipeline": "npm run lint && && npm run security-tests"
   },
   "repository": {
     "type": "git",
@@ -22,5 +29,12 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^7.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.39.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1"
   }
 }
