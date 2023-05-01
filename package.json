@@ -11,7 +11,7 @@
     "security:outdated": "npm outdated || true",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "pipeline": "npm run lint && && npm run security-tests"
+    "pipeline": "npm run lint && npm run security-tests"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/djain401/group-todo-backend/issues"
   },
